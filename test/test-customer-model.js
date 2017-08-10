@@ -16,7 +16,10 @@ describe('Customers', () => {
         myCustomer
             .get(1)
             .then((result) => {
-                console.log(result);
+                console.log(myCustomer.name);
+                console.log(myCustomer.email);
+                console.log(myCustomer.address);
+                console.log(myCustomer.password);
                 done();
             });
     });
