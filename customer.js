@@ -24,6 +24,16 @@ class Customer {
             ('${this.name}', '${this.email}', '${this.address}', '${this.password}')
         `);
     }
+
+    get(id) {
+        return this.db.one(`
+            SELECT * from customers where customer_id=${id};
+        `).then((result) => {
+            this.name = result.name;
+            this.email = 
+            return result;
+        })
+    }
 }
 
 module.exports = Customer;
